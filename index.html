@@ -1,0 +1,79 @@
+<title>Tav 2023 trial</title>
+<h1>not enough? click this link <a href="https://tavtechnologies.aero/">Visit the original 🅃🄰🅅 technologies</a></h1>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/QAciOwhQMeo" title="Tele1 ᴴᴰ  - Canlı Yayın" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<style>
+    body {
+      background-image: url('https://media.giphy.com/media/3o72EZplI5RBdJU17q/giphy.gif');
+    }
+    </style>
+<style>
+    #mydiv {
+      position: absolute;
+      z-index: 9;
+      background-color: #f1f1f1;
+      text-align: center;
+      border: 1px solid #d3d3d3;
+    }
+    
+    #mydivheader {
+      padding: 10px;
+      cursor: move;
+      z-index: 10;
+      background-color: #0000ff;
+      color: rgb(2, 0, 110);
+    }
+    </style>
+    <body>
+    
+    <div id="mydiv">
+      <div id="mydivheader">TAVpreviewer</div>
+      <p>the servers and the discord are here ---> <a href="https://shortest.link/TAV-technologies">🅃🄰🅅 technologies server discord</a></p>
+      <p><img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://th.bing.com/th/id/R.49205771f7ab9192a82de64d42e8b6c9?rik=4LUuXhJtFWZXow&amp;riu=http%3a%2f%2fwww.fiberopticshare.com%2fwp-content%2fuploads%2f2019%2f05%2fblade-servers.jpg&amp;ehk=8Og6njMJ6SdkJ%2fl%2f%2bF1iM8rdWXA2t4S3kv8aDw55HkY%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0"></p>
+    </div>
+    
+    <script>
+    //Make the DIV element draggagle:
+    dragElement(document.getElementById("mydiv"));
+    
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+    
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    </script>
+</body>
